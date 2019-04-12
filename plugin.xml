@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-acs122unfcplugin" version="1.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Acs122uNfcPlugin</name>
+    <js-module name="Acs122uNfcPlugin" src="www/Acs122uNfcPlugin.js">
+        <clobbers target="Acs122uNfcPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="Acs122uNfcPlugin">
+                <param name="android-package" value="cordova.plugin.acs122unfcplugin.Acs122uNfcPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <lib-file src="src/android/lib/acssmc-1.1.4.jar"/>
+        <source-file src="src/android/Acs122uNfcPlugin.java" target-dir="src/cordova/plugin/acs122unfcplugin/Acs122uNfcPlugin" />
+    </platform>
+</plugin>
